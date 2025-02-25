@@ -1,0 +1,119 @@
+/* Основной контейнер */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Занимаем всю высоту экрана */
+}
+
+/* Контент */
+.content {
+  flex: 1; /* Растягиваем контент на всю доступную высоту */
+  padding: 20px;
+}
+
+/* Подвал */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: transparent;
+  color: #0F3154;
+  border-top: 1px solid #09E4A8;
+  margin-top: auto; /* Прижимаем подвал к низу */
+}
+
+:root {
+  /* Цвета для светлой темы */
+  --light-bg: #e4e6f3;
+  --light-text: #0F3154;
+  --light-primary: #07aa7d;
+
+  /* Цвета для темной темы */
+  --dark-bg: #191D26;
+  --dark-text: #418f7b;
+  --dark-primary: #00cd97;
+  --dark-heading: #09E4A8;
+}
+
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+h1, h2, h3 {
+  color: var(--light-primary);
+  transition: color 0.3s ease;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: var(--dark-heading);
+}
+
+a {
+  color: var(--light-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.dark a {
+  color: var(--dark-primary);
+}
+
+/* Кнопки */
+button {
+  background-color: var(--light-primary);
+  color: 191D26;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8cffe3;
+}
+
+body.dark button {
+  background-color: var(--dark-primary);
+  color: var(--dark-bg);
+}
+
+body.dark button:hover {
+  background-color: #8cffe3;
+}
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.page h1 {
+  color: var(--light-primary);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.page p {
+  font-size: 1.2rem;
+  color: var(--light-text);
+}
+
+body.dark .page h1 {
+  color: var(--dark-heading);
+}
+
+body.dark .page p {
+  color: var(--dark-text);
+}

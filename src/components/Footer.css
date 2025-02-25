@@ -1,0 +1,36 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent; /* Прозрачный фон */
+    color: #0F3154; /* Цвет текста по умолчанию */
+    border-top: 1px solid #09E4A8; /* Граница сверху */
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #09E4A8; /* Цвет ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #336eaa; /* Цвет ссылок при наведении */
+}
+
+/* Темная тема */
+body.dark .footer {
+    color: #09E4A8; /* Цвет текста в темной теме */
+}
+
+body.dark .footer a {
+    color: #09E4A8; /* Цвет ссылок в темной теме */
+}
+
+body.dark .footer a:hover {
+    color: #07c48a; /* Цвет ссылок при наведении в темной теме */
+}

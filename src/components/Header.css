@@ -1,0 +1,93 @@
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent; /* Убираем фон меню */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+body.dark header {
+    background-color: transparent; /* Убираем фон меню в темной теме */
+}
+
+nav {
+    padding-right: 40px;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.nav-center {
+    padding-right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.76), 0 6px 10px 0 rgba(255, 255, 255, 0.31);
+    font-size: 1.1rem;
+    color: Black; /* Белый текст для светлой темы */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background-color: #09E4A8; /* Цвет кнопок */
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #07c48a; /* Цвет кнопок при наведении */
+    border-color: #07c48a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(9, 228, 168, 0.3); /* Тень с цветом кнопок */
+}
+
+/* Темная тема */
+body.dark .nav-button {
+    background-color: #07c48a;
+    color: black; /* Черный текст для темной темы */
+}
+
+body.dark .nav-button:hover {
+    background-color: #07c48a; /* Цвет кнопок при наведении */
+    border-color: #07c48a;
+}
+
+.theme-toggle{
+    border-radius: 15px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        bottom: 0;
+        top: auto; /* Перемещаем меню вниз */
+        background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+        backdrop-filter: blur(10px); /* Размытие фона */
+        border-top: 1px solid #e0e0e0; /* Граница сверху */
+    }
+
+    body.dark header {
+        background-color: rgba(25, 29, 38, 0.9); /* Полупрозрачный фон для темной темы */
+        border-top: 1px solid #09E4A8; /* Граница сверху для темной темы */
+    }
+
+    .nav-center {
+        justify-content: space-around; /* Равномерное распределение кнопок */
+        width: 100%;
+    }
+
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+        flex: 1; /* Растягиваем кнопки на всю ширину */
+        text-align: center;
+    }
+}

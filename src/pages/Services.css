@@ -1,0 +1,73 @@
+/* Стили для страницы сервисов */
+.services-page {
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.services-page h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+/* Сетка для сервисов */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для карточки сервиса */
+.service-card {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(32, 30, 30, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .services-page h1 {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}

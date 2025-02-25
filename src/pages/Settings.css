@@ -1,0 +1,94 @@
+.settings-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-page h2 {
+    color: var(--light-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: var(--light-text);
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+.save-button {
+    padding: 10px;
+    background-color: var(--light-primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.logout-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff4444;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+/* Темная тема */
+body.dark .settings-page {
+    background-color: var(--dark-bg);
+    border-color: var(--dark-border);
+}
+
+body.dark .form-group input,
+body.dark .form-group select {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+body.dark .save-button {
+    background-color: var(--dark-primary);
+}
+
+body.dark .logout-button {
+    background-color: #ff4444;
+}

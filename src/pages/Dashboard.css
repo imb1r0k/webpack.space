@@ -1,0 +1,65 @@
+.dashboard-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard-page h2 {
+    color: var(--light-primary);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.dashboard-page p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 40px;
+}
+
+.dashboard-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-button {
+    padding: 20px;
+    background-color: var(--light-primary);
+    border: 2px solid var(--light-primary);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dashboard-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Темная тема */
+body.dark .dashboard-page h2 {
+    color: var(--dark-heading);
+}
+
+body.dark .dashboard-page p {
+    color: var(--dark-text);
+}
+
+body.dark .dashboard-button {
+    background-color: var(--dark-primary);
+    border-color: var(--dark-primary);
+    color: var(--dark-bg);
+}
+
+body.dark .dashboard-button:hover {
+    background-color: #07c48a;
+    border-color: #07c48a;
+}
